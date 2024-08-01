@@ -1,6 +1,4 @@
 $(document).ready(function(){
-
-    // slick slider
     // advantages slider
     function initializeSlickSlider() {
     $('.advantages__slider').slick({
@@ -20,14 +18,11 @@ $(document).ready(function(){
         ]
     });
     }
-
     function destroySlickSlider() { $('.advantages__slider').slick('unslick'); }
-
     function checkScreenWidth() {
         initializeSlickSlider();
         if ($(window).width() >= 1020) destroySlickSlider();
     }
-
     checkScreenWidth();
     $(window).resize(function(){ checkScreenWidth(); });
 
@@ -50,7 +45,7 @@ $(document).ready(function(){
     });
     
 
-  /* show / hide card content */
+    // show / hide card content 
     let showButtons = document.querySelectorAll('.advantages__show-but');
     showButtons.forEach(but => 
         but.addEventListener('click', e =>{
